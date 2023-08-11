@@ -9,3 +9,11 @@
 ## 프로그램 동작 프리뷰
 [![유튜브동영상](https://img.youtube.com/vi/zD_y5Zbd5ac/0.jpg)](https://www.youtube.com/watch?v=zD_y5Zbd5ac)  
 클릭시 유튜브 동영상으로 넘어갑니다.
+
+## 사용 라이브러리
+<div align=left> 
+<img src="https://img.shields.io/badge/RETROFIT2-48b983?style=for-the-badge&logoColor=white">
+<img src="https://img.shields.io/badge/GSON-4285F4?style=for-the-badge&logo=google&logoColor=white">
+<img src="https://img.shields.io/badge/FLEXBOX-4285F4?style=for-the-badge&logo=google&logoColor=white">
+<img src="https://img.shields.io/badge/LOTTIEFILES-48b983?style=for-the-badge&logoColor=white">
+</div>
