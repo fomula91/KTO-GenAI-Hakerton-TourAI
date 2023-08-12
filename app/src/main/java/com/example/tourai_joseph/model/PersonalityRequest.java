@@ -1,7 +1,11 @@
 package com.example.tourai_joseph.model;
 
 public class PersonalityRequest {
-    private int[] openness, conscientiousness, extraversion, agreeableness, neuroticism = new int[5];
+    private int[] openness = new int[5];
+    private int[] conscientiousness = new int[5];
+    private int[] extraversion = new int[5];
+    private int[] agreeableness = new int[5];
+    private int[] neuroticism = new int[5];
 
     public int[] getOpenness() {
         return this.openness;
@@ -11,7 +15,7 @@ public class PersonalityRequest {
     }
 
     public int[] getConscientiousness() {
-        return conscientiousness;
+        return this.conscientiousness;
     }
 
     public void setConscientiousness(int[] conscientiousness) {
@@ -19,7 +23,7 @@ public class PersonalityRequest {
     }
 
     public int[] getExtraversion() {
-        return extraversion;
+        return this.extraversion;
     }
 
     public void setExtraversion(int[] extraversion) {
@@ -27,7 +31,7 @@ public class PersonalityRequest {
     }
 
     public int[] getAgreeableness() {
-        return agreeableness;
+        return this.agreeableness;
     }
 
     public void setAgreeableness(int[] agreeableness) {
@@ -35,7 +39,7 @@ public class PersonalityRequest {
     }
 
     public int[] getNeuroticism() {
-        return neuroticism;
+        return this.neuroticism;
     }
 
     public void setNeuroticism(int[] neuroticism) {

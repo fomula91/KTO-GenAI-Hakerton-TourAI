@@ -46,7 +46,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class PropencityQuestions extends AppCompatActivity {
-    private int[] openness, conscientiousness, extraversion, agreeableness, neuroticism = new int[5];
+    private int[] openness = new int[5];
+    private int[] conscientiousness = new int[5];
+    private int[] extraversion = new int[5];
+    private int[] agreeableness = new int[5];
+    private int[] neuroticism = new int[5];
 
     private List<Integer> selectedOptions = new ArrayList<>();
     private AnswerModel viewModel;
@@ -174,8 +178,9 @@ public class PropencityQuestions extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (allQuestionsAnswered()) {
-                    Log.d("currentQuestions", String.valueOf(currentQuestionSet));
-                    switch(currentQuestionSet) {
+                    Log.d("currentQuestions", "current : " + String.valueOf(currentQuestionSet));
+                    Log.d("currentQuestions", "openness : "+ openness.toString());
+                    /*switch(currentQuestionSet) {
                         case 0 :
                             updateData(openness, "Openness");
                             break;
@@ -191,7 +196,7 @@ public class PropencityQuestions extends AppCompatActivity {
                         case 4 :
                             updateData(neuroticism, "Neuroticism");
                             break;
-                    }
+                    }*/
 
                     currentQuestionSet++;
                     if(currentQuestionSet * 5 < questions.size()){
@@ -239,6 +244,8 @@ public class PropencityQuestions extends AppCompatActivity {
                 } else {
                     int optionIndex = radioGroup.indexOfChild(findViewById(checkedRadioButtonId));
                     selectedOptions.add(optionIndex);
+                    Log.d("addOptions", "add option");
+                    Log.d("addOptins", selectedOptions.toString());
                 }
             }
         }
