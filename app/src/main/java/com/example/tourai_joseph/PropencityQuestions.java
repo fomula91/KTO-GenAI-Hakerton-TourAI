@@ -180,7 +180,7 @@ public class PropencityQuestions extends AppCompatActivity {
                 if (allQuestionsAnswered()) {
                     Log.d("currentQuestions", "current : " + String.valueOf(currentQuestionSet));
                     Log.d("currentQuestions", "openness : "+ openness.toString());
-                    /*switch(currentQuestionSet) {
+                    switch(currentQuestionSet) {
                         case 0 :
                             updateData(openness, "Openness");
                             break;
@@ -196,7 +196,7 @@ public class PropencityQuestions extends AppCompatActivity {
                         case 4 :
                             updateData(neuroticism, "Neuroticism");
                             break;
-                    }*/
+                    }
 
                     currentQuestionSet++;
                     if(currentQuestionSet * 5 < questions.size()){
@@ -207,6 +207,7 @@ public class PropencityQuestions extends AppCompatActivity {
 
                         //Intent intent = new Intent(PropencityQuestions.this, PropencityQuestions.class);
                         //startActivity(intent);
+                        sendDataToServer();
                     }
 
                 } else {
