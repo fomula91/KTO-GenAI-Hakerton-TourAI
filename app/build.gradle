@@ -2,18 +2,22 @@ plugins {
     id 'com.android.application'
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
 android {
     namespace 'com.example.tourai_joseph'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.tourai_joseph"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "BASE_URL", properties["api.key"]
     }
 
     buildTypes {
@@ -21,6 +25,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
+    }
+    buildFeatures {
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
