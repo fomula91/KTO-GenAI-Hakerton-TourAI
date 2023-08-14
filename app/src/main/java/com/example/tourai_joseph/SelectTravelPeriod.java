@@ -125,8 +125,8 @@ public class SelectTravelPeriod extends AppCompatActivity {
                         editor.putString("day", String.valueOf(diffDays));
                         editor.commit();
 
-                        /*Intent intent = new Intent(SelectTravelPeriod.this, SelectTravelMember.class);
-                        startActivity(intent);*/
+                        Intent intent = new Intent(SelectTravelPeriod.this, SelectTravelMember.class);
+                        startActivity(intent);
                     }
 
                 } catch(ParseException e) {
