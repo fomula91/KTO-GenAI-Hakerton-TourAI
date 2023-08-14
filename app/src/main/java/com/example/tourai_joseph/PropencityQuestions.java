@@ -285,18 +285,45 @@ public class PropencityQuestions extends AppCompatActivity {
 
 
         PersonalityRequest request = new PersonalityRequest();
-        request.setOpenness(opennessData);
-        request.setConscientiousness(conscientiousnessData);
-        request.setExtraversion(extraversionData);
-        request.setAgreeableness(agreeablenessData);
-        request.setNeuroticism(neuroticismData);
+        request.setOpenness1(opennessData[0]);
+        request.setOpenness2(opennessData[1]);
+        request.setOpenness3(opennessData[2]);
+        request.setOpenness4(opennessData[3]);
+        request.setOpenness5(opennessData[4]);
+
+        request.setConscientiousness1(conscientiousnessData[0]);
+        request.setConscientiousness2(conscientiousnessData[1]);
+        request.setConscientiousness3(conscientiousnessData[2]);
+        request.setConscientiousness4(conscientiousnessData[3]);
+        request.setConscientiousness5(conscientiousnessData[4]);
+
+        request.setExtraversion1(extraversionData[0]);
+        request.setExtraversion2(extraversionData[1]);
+        request.setExtraversion3(extraversionData[2]);
+        request.setExtraversion4(extraversionData[3]);
+        request.setExtraversion5(extraversionData[4]);
+
+        request.setAgreeableness1(agreeablenessData[0]);
+        request.setAgreeableness2(agreeablenessData[1]);
+        request.setAgreeableness3(agreeablenessData[2]);
+        request.setAgreeableness4(agreeablenessData[3]);
+        request.setAgreeableness5(agreeablenessData[4]);
+
+        request.setNeuroticism1(neuroticismData[0]);
+        request.setNeuroticism2(neuroticismData[1]);
+        request.setNeuroticism3(neuroticismData[2]);
+        request.setNeuroticism4(neuroticismData[3]);
+        request.setNeuroticism5(neuroticismData[4]);
 
         API api = RetrofitClient.getRetrofitInstance().create(API.class);
         Call<PersonalityResponse> call = api.getTravelPersonality(request);
 
+        Log.d("iscall", "call");
+
         call.enqueue(new Callback<PersonalityResponse>() {
             @Override
             public void onResponse(Call<PersonalityResponse> call, Response<PersonalityResponse> response) {
+                Log.d("isresponse?", "get response");
                 if (response.isSuccessful()) {
                     PersonalityResponse personalityResponse = response.body();
 
@@ -309,6 +336,9 @@ public class PropencityQuestions extends AppCompatActivity {
                     intent.putExtra("character", character);
                     intent.putExtra("travelPreferences", travelPreferences);
                     startActivity(intent);
+                }
+                else {
+                    Log.d("Retrofit", response.code() + " : Data not sent");
                 }
             }
 

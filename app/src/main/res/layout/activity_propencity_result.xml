@@ -1,9 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".PropencityResult">
+    android:layout_height="match_parent">
 
+    <!-- 히스토리 버튼 -->
+    <Button
+        android:id="@+id/historyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="히스토리"
+        android:background="@android:color/transparent"
+        android:textColor="#222222"
+        android:textSize="17dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ic_history"
+        android:layout_marginTop="15dp" />
+
+    <!-- 히스토리 아이콘 -->
+    <ImageView
+        android:id="@+id/ic_history"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_history"
+        app:layout_constraintBottom_toBottomOf="@id/historyButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/historyButton" />
+
+    <ImageView
+        android:id="@+id/ic_suitcase"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="165dp"
+        android:src="@drawable/ic_suitcase"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text1"/>
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="198dp"
+        android:layout_height="30dp"
+        android:text="당신의 여행 성향은?"
+        android:layout_marginTop="36dp"
+        android:layout_marginStart="107dp"
+        android:layout_marginEnd="107dp"
+        android:textSize="23dp"
+        android:textColor="#2B73FA"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/ic_suitcase"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_character"/>
+
+    <TextView
+        android:id="@+id/tv_character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='"성향 표시 자리"'
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="60dp"
+        android:textSize="30dp"
+        android:textColor="#0E48B4"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/box"/>
+
+
+    <ImageView
+        android:id="@+id/box"
+        android:layout_width="366dp"
+        android:layout_height="211dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="441dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="240dp"
+        android:background="@drawable/background_grey_box"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/first"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginEnd="83dp"
+        android:layout_marginBottom="123dp"
+        android:text="몇가지 여행 정보를 입력하여\n당신에게 가장 어울리는"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="#646464"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/box"
+        app:layout_constraintStart_toStartOf="@id/box"
+        app:layout_constraintEnd_toEndOf="@id/box"
+        app:layout_constraintBottom_toBottomOf="@id/box"/>
+
+    <TextView
+        android:id="@+id/tv_travelPreferences"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="80dp"
+        android:text='"여행지 추천 자리"'
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textColor="#2B73FA"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/box"
+        app:layout_constraintStart_toStartOf="@id/box"
+        app:layout_constraintEnd_toEndOf="@id/box"
+        app:layout_constraintBottom_toBottomOf="@id/box"/>
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="39dp"
+        android:text="를 찾아드릴게요!"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="#646464"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/box"
+        app:layout_constraintStart_toStartOf="@id/box"
+        app:layout_constraintEnd_toEndOf="@id/box"
+        app:layout_constraintBottom_toBottomOf="@id/box"/>
+
+
+    <!-- 다음 버튼 -->
+    <Button
+        android:id="@+id/pp_result_next_button"
+        android:layout_width="366dp"
+        android:layout_height="58dp"
+        android:text="여행 정보 입력하기"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/button_rounded_background"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
