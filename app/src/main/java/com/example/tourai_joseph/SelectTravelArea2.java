@@ -92,8 +92,8 @@ public class SelectTravelArea2 extends AppCompatActivity {
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent = new Intent(SelectTravelArea2.this, SelectTravelPeriod.class);
-                startActivity(intent);*/
+                Intent intent = new Intent(SelectTravelArea2.this, SelectTravelPeriod.class);
+                startActivity(intent);
             }
         });
 
